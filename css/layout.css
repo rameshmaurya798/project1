@@ -1,0 +1,56 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.wrapper{
+    width:100vw;
+    height:100vh;
+    overflow:hidden;
+   
+
+}
+
+
+
+.mainbody{
+    width:1200px;
+    height:auto;
+    margin:10px auto 10px auto;
+    overflow:hidden;
+    background-color:white;
+
+}
+
+.col1{
+    width:23%;
+    height:300px;
+    float: left;
+    background-color:green;
+
+}
+.col2{
+    width:50%;
+    height:300px;
+    margin-left: 2%;
+    float: left;
+    background-color:tomato;
+
+}
+.col3{
+    width:23%;
+    height:300px;
+ 
+    float: right;
+    background-color:purple;
+
+}
+
+.logo{
+    margin: 0 auto 0 auto;
+    width:60px;
+    height: 60px;
+    background-color: white;
+}
