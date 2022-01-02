@@ -34,10 +34,10 @@ body{
 }
 .col2{
     width:50%;
-    height:300px;
+    height:auto;
     margin-left: 2%;
     float: left;
-    background-color:tomato;
+     
 
 }
 .col3{
