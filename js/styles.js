@@ -7,14 +7,15 @@ const handleColumnsSelector = (parent) => {
     }
 
     Array.from(rows).forEach(row => {
+        
         const rect = row.getBoundingClientRect()
         let cols = row.querySelectorAll('[col]');
 
         cols.forEach(col => {
             const size = col.getAttribute('col');
             col.setAttributer('style', "height: "+ rect.height +"px;float:left;width: "+ size + "%;");
-        })
-    })
+        });
+    });
 }
 
 
