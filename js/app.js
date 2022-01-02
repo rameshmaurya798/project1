@@ -1,5 +1,5 @@
 const loatTemplates=(parent)=>{
-
+    hendleColumnsSelector(parent);
     //Find all tags which have the attribute template
     const items=parent.querySelectorAll('[template]');
 
@@ -34,5 +34,12 @@ const loatTemplates=(parent)=>{
 
 const onWindowLoaded=()=>{
     loadTemplates(document);
+    if(window.ready===undefined){
+        return;
+    }
+
+    window.ready.forEach(cb => {
+        cb();
+    });
 }
 window.onload=onWindowLoaded;
