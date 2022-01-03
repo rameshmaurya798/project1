@@ -1,55 +1,53 @@
- 
+.right-navbar-section {
+    
+}
 
-.tweet-button{
+.tweet-button {
     margin: 5px;
-    background: #333;
+    background: #2598FF;
     color: #fff;
     font-size: 0.7em;
     text-align: center;
-    height: absolute;
+    position: absolute;
     top: 5px;
-    left: 5px;
     right: 5px;
     bottom: 5px;
-    vertical-align: middle;
-    line-height:38px;
-    border-radius: 20px;
+    left: 5px;
+    line-height: 38px;
+    border-radius: 20px;    
     box-shadow: 1px 1px 3px #fdfdfd;
 }
 
-.tweet-button:hover{
+.tweet-button:hover {
     cursor: pointer;
     background: #444;
 }
 
-.used-icon{
+.user-icon {
     height: 40px;
     width: 40px;
     margin: 10px;
-    background: red;
+    background-color: red;
     border-radius: 20px;
-
 }
 
-.search-box-wrapper{
+.search-box-wrapper {
     height: 40px;
     width: auto;
     margin: 10px;
-    background: rgb(212, 207, 207);
-    border-radius: 20px;
+    background-color: rgba(233, 228, 228, 0.397);
+    border-radius: 20px; 
     border: 1px solid #e1e1e1;
 }
 
-.search-container{
-    width:160px ;
-    float:left;
-    height: 100%;
-   
-}
-.search-button{
+.search-container {
     width: 140px;
     height: 100%;
-    float: right;
-   
+    float: left;
+}
 
+.search-button {
+    width: 40px;
+    height: 100%;
+    float: right;
 }

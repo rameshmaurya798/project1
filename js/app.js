@@ -1,40 +1,37 @@
-const loatTemplates=(parent)=>{
-    hendleColumnsSelector(parent);
-    //Find all tags which have the attribute template
-    const items=parent.querySelectorAll('[template]');
+const loadTemplates = (parent) => {
+    
+    handleColumnsSelector(parent);
 
-    ///iterate through all elements which the query has found
-    items.forEach(item=>{
-        const teplate=item.getAttribute('template');
+    /// Find all tags which have the attribute template
+    const items = parent.querySelectorAll('[template]');
+    
+    /// iterate through all elements which the query has found
+    items.forEach(item => {
+        
+        const template = item.getAttribute('template');
 
-
-        ///fetch the html content from the server
+        /// fetch the html content from the server
         fetch(template)
-
-        //handle a successful response
-
-        .then((response)=>{
+        /// handle a successful response
+        .then((response) => {
             return response.text();
         })
-        .then(content=>{
-            ///assign the html content loaded to 
-            //the items innerHTML
+        .then(content => {
+            /// assign the html content loaded to 
+            /// the items innerHTML
+            item.innerHTML = content;
 
-            item.innerHTML=content;
-
-            ///run this command on the item element so as to find any child template
-
+            /// run this command on the item element so as to find any child templates
             loadTemplates(item);
         })
-    });
-
+        
+   });
 }
 
-
-
-const onWindowLoaded=()=>{
+const onWindowLoaded = () => {
     loadTemplates(document);
-    if(window.ready===undefined){
+    
+    if (window.ready === undefined) {
         return;
     }
 
@@ -42,4 +39,5 @@ const onWindowLoaded=()=>{
         cb();
     });
 }
-window.onload=onWindowLoaded;
+
+window.onload = onWindowLoaded;
